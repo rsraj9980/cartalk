@@ -17,3 +17,21 @@ a {
 .login img {
     height: 30px;
 }
+
+#userImg {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: right;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+#userName {
+    justify-content: left;
+}
