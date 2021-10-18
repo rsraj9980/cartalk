@@ -1,5 +1,20 @@
-<% include partials/header %>
+<!DOCTYPE html>
+<html lang="en">
 
-    <h2>CARTALK</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarTalk!</title>
+</head>
 
-    <% include partials/footer %>
+<body>
+    <nav>
+        <% if(!user) {%>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+            <% } %>
+    </nav>
+</body>
+
+</html>
