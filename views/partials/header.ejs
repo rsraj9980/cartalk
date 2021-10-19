@@ -11,9 +11,9 @@
 
 <body>
     <nav>
-        <a href="/events/new">Add Event</a>
+        <a aria-current="page" href="/events/new">Add Event</a>
         <a href="/events">All Events</a>
-        <a href="/events/show">Search Events by City</a>
+        <a href="/events/search">Search Events by City</a>
         <% if (user) { %>
             <p id="userName">HELLO!
                 <%=user.name%>
