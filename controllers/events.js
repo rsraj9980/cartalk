@@ -7,13 +7,8 @@ module.exports = {
     show,
     delete: deleteEvent,
     edit,
-    update,
-    search
+    update
 };
-
-function search(req, res) {
-    res.render('events/search', { title: 'Search Events' });
-}
 
 function index(req, res) {
     Event.find({}, function(err, events) {

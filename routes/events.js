@@ -6,7 +6,6 @@ const isLoggedIn = require('../config/auth');
 
 router.get('/', eventCtrl.index);
 router.get('/new', isLoggedIn, eventCtrl.new);
-router.get('/search', eventCtrl.search);
 router.get('/:id', eventCtrl.show);
 router.post('/', isLoggedIn, eventCtrl.create);
 router.delete('/:id', eventCtrl.delete);
