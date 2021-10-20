@@ -1,3 +1,4 @@
+const { events } = require('../models/event');
 const Event = require('../models/event');
 
 module.exports = {
@@ -32,6 +33,7 @@ function show(req, res) {
 
 function create(req, res) {
     const event = new Event(req.body);
+    event.user = req.user._id;
     event.save(function(err) {
         if (err) return res.redirect('/events/new');
         console.log(event);
@@ -40,13 +42,14 @@ function create(req, res) {
 }
 
 function deleteEvent(req, res) {
-    Event.findByIdAndDelete(req.params.id, function(err) {
-        res.redirect("/events");
+    Event.findByIdAndDelete({ _id: req.params.id, user: req.user._id }, function(err) {
+        res.redirect('/events');
     });
 }
 
+
 function edit(req, res) {
-    Event.findById(req.params.id, function(err, event) {
+    Event.findById({ _id: req.params.id, user: req.user._id }, function(err, event) {
         if (err) {
             res.redirect(`/events/${req.params.id}`);
         }
