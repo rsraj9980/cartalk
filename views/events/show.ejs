@@ -20,8 +20,8 @@
     <% if (user) { %>
         <form id="add-comment-form" method="POST" action="/events/<%= event._id %>/comments">
             <label>Comment:</label>
-            <textarea name="comments"></textarea>
-            <input type="submit" value="Add Review">
+            <textarea name="content"></textarea>
+            <input type="submit" value="Add Comment">
         </form>
         <% } %>
 

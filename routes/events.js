@@ -8,7 +8,7 @@ router.get('/', eventCtrl.index);
 router.get('/new', isLoggedIn, eventCtrl.new);
 router.get('/:id', eventCtrl.show);
 router.post('/', isLoggedIn, eventCtrl.create);
-router.delete('/:id', eventCtrl.delete);
+router.delete('/:id', isLoggedIn, eventCtrl.delete);
 router.get('/:id/edit', eventCtrl.edit);
 router.put('/:id', eventCtrl.update);
 

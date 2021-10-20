@@ -51,11 +51,13 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+const isLoggedIn = require('./config/auth');
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/events', eventsRouter);
+app.use('/events', isLoggedIn, eventsRouter);
 app.use('/searches', searchesRouter);
-app.use('/', commentsRouter);
+app.use('/', isLoggedIn, commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
