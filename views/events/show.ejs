@@ -15,3 +15,49 @@
             <%= event.date %>
         </div>
     </section>
+
+    <h2>Comments</h2>
+    <% if (user) { %>
+        <form id="add-comment-form" method="POST" action="/events/<%= event._id %>/comments">
+            <label>Comment:</label>
+            <textarea name="comments"></textarea>
+            <input type="submit" value="Add Review">
+        </form>
+        <% } %>
+
+            <% if (event.comments.length) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Date</th>
+                            <th>Comment</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% event.comments.forEach(function(r) { %>
+                            <tr>
+                                <td class="comment-user"><img src="<%= r.userAvatar %>" alt="avatar">
+                                    <%= r.userName %>
+                                </td>
+                                <td>
+                                    <%= r.createdAt.toLocaleDateString() %>
+                                </td>
+                                <td>
+                                    <%= r.content %>
+                                </td>
+                                <td>
+                                    <% if (user?._id.equals(r.user)) { %>
+                                        <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
+                                            <button type="submit">X</button>
+                                        </form>
+                                        <% } %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <h5>No Comments Yet</h5>
+                    <% } %>

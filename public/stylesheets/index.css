@@ -1,14 +1,15 @@
 body {
-    background-image: url(https://i.imgur.com/AHCVyep.jpg);
+    background-image: url(https://i.imgur.com/g8IpdZr.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 a {
-    color: cornflowerblue;
+    color: black;
     font-weight: bolder;
     font-size: 20px;
     margin: 20px;
+    text-decoration: none;
 }
 
 .login {
