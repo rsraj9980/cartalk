@@ -45,10 +45,11 @@
                                     </form>
                                 </td>
                                 <% }%>
-                                    <td>
-                                        <form action="/events/<%= e._id %>/add">
 
-                                            <button type="submit" class="DDEbutton">Attendee</button>
+                                    <td>
+                                        <form action="/events/<%= e._id %>/attendees" method="POST">
+
+                                            <button type="submit" class="DDEbutton">Attendee <%= e.attendees.length%></button>
                                         </form>
                                     </td>
 

@@ -13,6 +13,7 @@ module.exports = {
 
 function index(req, res) {
     Event.find({}, function(err, events) {
+        console.log(events);
         res.render('events/index', { title: 'All Events', events });
     });
 }
