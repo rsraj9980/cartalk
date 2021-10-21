@@ -1,4 +1,4 @@
-const { events } = require('../models/event');
+// const { events } = require('../models/event');
 const Event = require('../models/event');
 
 module.exports = {
@@ -63,7 +63,7 @@ function edit(req, res) {
 function update(req, res) {
     Event.findByIdAndUpdate(req.params.id, req.body, function(err, event) {
         if (err) {
-            res.render("events/edit", { event, title: "Edit Event" });
+            res.render("events/edit", { event, title: "Update Event" });
         }
         res.redirect(`/events/${event._id}`);
     });

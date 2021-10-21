@@ -1,0 +1,53 @@
+<%- include('../partials/header') %>
+
+    <form id="search-form" action="/searches/index" method="POST">
+        <label>City:</label>
+        <input type="text" name="city">
+        <input type="submit" value="Search Event">
+    </form>
+    <br><br><br>
+
+
+    <h2>EVENTS IN YOUR CITY</h2>
+    <table id="list">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Venue</th>
+                <th>Description</th>
+                <th>City</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <%if(events.length) { %>
+            <tbody>
+
+                <% events.forEach(function(e) { %>
+                    <tr>
+                        <td>
+                            <%= e.title %>
+                        </td>
+                        <td>
+                            <%= e.venue %>
+                        </td>
+                        <td>
+                            <%= e.description %>
+                        </td>
+                        <td>
+                            <%= e.city %>
+                        </td>
+                        <td>
+                            <%= e.date.toLocaleDateString() %>
+                                <%= e.date.toLocaleTimeString() %>
+                        </td>
+                        <td><a href="/events/<%= e._id %>">DETAILS</a></td>
+
+                    </tr>
+                    <%});%>
+            </tbody>
+            <%} else {%>
+                <h1>NO MATCHING RESULTS</h1>
+                <%}%>
+    </table>
+
+    <%- include('../partials/footer') %>
