@@ -45,6 +45,13 @@
                                     </form>
                                 </td>
                                 <% }%>
+                                    <td>
+                                        <form action="/events/<%= e._id %>/add">
+
+                                            <button type="submit" class="DDEbutton">Attendee</button>
+                                        </form>
+                                    </td>
+
                 </tr>
                 <% }); %>
         </tbody>
