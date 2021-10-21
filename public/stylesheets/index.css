@@ -5,11 +5,7 @@ body {
 }
 
 a {
-    color: black;
-    font-weight: bolder;
-    font-size: 20px;
-    margin: 20px;
-    text-decoration: none;
+    margin: 30px;
 }
 
 .login {
@@ -21,4 +17,8 @@ a {
 
 .login img {
     height: 30px;
+}
+
+img:hover {
+    transform: scale(1.5);
 }

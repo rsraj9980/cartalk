@@ -1,12 +1,13 @@
 <%- include('../partials/header') %>
-    <table id="list">
+    <br><br><br>
+    <table id="list" class="table table-hover">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Venue</th>
-                <th>Description</th>
-                <th>City</th>
-                <th>Date</th>
+                <th scope="col">Title</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Description</th>
+                <th scope="col">City</th>
+                <th scope="col">Date</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +19,7 @@
                     <td>
                         <%= e.venue %>
                     </td>
-                    <td>
+                    <td id="description">
                         <%= e.description %>
                     </td>
                     <td>
@@ -28,18 +29,19 @@
                         <%= e.date.toLocaleDateString() %> &nbsp
                             <%= e.date.toLocaleTimeString() %>
                     </td>
-                    <td><a href="/events/<%= e._id %>">DETAILS</a></td>
+                    <td><a href="/events/<%= e._id %>"><button class= "DDEbutton">Details</button></a></td>
                     <% if (user?._id.equals(e.user)) { %>
                         <td>
                             <form action="/events/<%= e._id %>?_method=DELETE" method="POST">
-                                <button type="submit">X</button>
+                                <button type="submit" class="DDEbutton">Delete</button>
                             </form>
                         </td>
                         <% }%>
                             <% if (user?._id.equals(e.user)) { %>
                                 <td>
                                     <form action="/events/<%= e._id %>/edit">
-                                        <button type="submit">edit</button>
+
+                                        <button type="submit" class="DDEbutton">EDIT</button>
                                     </form>
                                 </td>
                                 <% }%>
