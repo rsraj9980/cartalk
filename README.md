@@ -8,7 +8,7 @@
 
 ### Starting look of the CarTalk website:- 
 
-![Starting Look of the Website]()
+![Starting Look of the Website](https://i.imgur.com/fJHgnBT.png)
 
 
 # Technologies Used: 
