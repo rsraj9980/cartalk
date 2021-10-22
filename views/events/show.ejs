@@ -1,44 +1,41 @@
 <%- include('../partials/header') %>
-
+    <br><br><br>
     <section id="show-page">
-        <div>Title:
-            <%= event.title %>
-        </div>
-        <div>Venue:
-            <%= event.venue %>
-        </div>
-        <div>Description:
-            <%= event.description %>
-        </div>
-        <label>City:  <%= event.city %></label>
-        <div>Date:
-            <%= event.date %>
-        </div>
+        <label class="showLabel"> Title:</label>
+        <label class="showDetail"><%= event.title %></label>
+        <label class="showLabel">Venue:</label>
+        <label class="showDetail"><%= event.venue %></label>
+        <label class="showLabel">Description:</label>
+        <label class="showDetail"><%= event.description %></label>
+        <label class="showLabel">City:</label>
+        <label class="showDetail"><%= event.city %></label>
+        <label class="showLabel">Date:</label>
+        <label class="showDetail"><%= event.date %></label>
     </section>
-
+    <br><br><br>
     <h2>Comments</h2>
     <% if (user) { %>
         <form id="add-comment-form" method="POST" action="/events/<%= event._id %>/comments">
             <label>Comment:</label>
-            <textarea name="content"></textarea>
+            <textarea name="content"></textarea><br>
             <input type="submit" value="Add Comment">
         </form>
         <% } %>
-
+            <br><br><br>
             <% if (event.comments.length) { %>
-                <table>
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>User</th>
-                            <th>Date</th>
-                            <th>Comment</th>
-                            <th></th>
+                            <th scope="col">User</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Comment</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <% event.comments.forEach(function(r) { %>
                             <tr>
-                                <td class="comment-user"><img src="<%= r.userAvatar %>" alt="avatar">
+                                <td><img id="commentUserImg" src="<%= r.userAvatar %>" alt="avatar">
                                     <%= r.userName %>
                                 </td>
                                 <td>
@@ -50,7 +47,7 @@
                                 <td>
                                     <% if (user?._id.equals(r.user)) { %>
                                         <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
-                                            <button type="submit">X</button>
+                                            <button id="deleteButton" type="submit">X</button>
                                         </form>
                                         <% } %>
                                 </td>

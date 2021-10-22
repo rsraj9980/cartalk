@@ -1,83 +1,240 @@
-body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-image: url(https://i.imgur.com/I5UQnr8.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-a {
-    color: black;
-    margin-top: 20px;
-    margin-left: 30px;
-    color: cornflowerblue;
-}
-
-#userImg {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    margin-top: -35px;
-}
-
-#userName {
-    margin-top: 38px;
-    margin-right: 30px;
-    color: black;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-a:hover {
-    margin-top: 2px;
-}
-
-.navbar {
-    background-color: #2B2B2B;
-    border-radius: 30px;
-    box-shadow: 5px 5px 5px #171010;
-}
-
-.DDEbutton {
-    background-color: #585858;
-    color: black;
-    border-radius: 30px;
-}
-
-.DDEbutton::backdrop {
-    backdrop-filter: drop-shadow(4px 4px 10px blue);
-}
-
-.DDEbutton:hover {
-    transform: scale(1.5);
-}
-
-table {
-    border-radius: 10px;
-    background-color: #626262;
-    table-layout: fixed;
-    overflow-wrap: break-word;
-    box-shadow: 2px 6px 5px white;
-}
-
-#edit {
-    display: flex;
-    justify-content: center;
-    background-color: #2B2B2B;
-    border-radius: 30px;
-    box-shadow: 2px 6px 5px rgb(0, 0, 0);
-    padding: 30px;
-}
-
-label {
-    color: white;
-    margin: 2vmin;
-}
+            body {
+                padding: 50px;
+                font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+                background-image: url(https://i.imgur.com/I5UQnr8.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            
+            a {
+                color: black;
+                margin-top: 20px;
+                margin-left: 30px;
+                width: 175px;
+                color: cornflowerblue;
+            }
+            
+            #userImg {
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: right;
+                margin-top: -35px;
+            }
+            
+            #userName {
+                margin-top: 38px;
+                margin-right: 30px;
+                color: #99A799;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+            
+            a:hover {
+                border-radius: 30px;
+                box-shadow: 5px 5px 5px #171010;
+                margin-top: 2px;
+            }
+            
+            .navbar {
+                background-color: #2B2B2B;
+                border-radius: 30px;
+                box-shadow: 5px 5px 5px #171010;
+            }
+            
+            .DDEbutton {
+                background-color: #99A799;
+                color: black;
+                border-radius: 30px;
+            }
+            
+            .DDEbutton::backdrop {
+                backdrop-filter: drop-shadow(4px 4px 10px blue);
+            }
+            
+            .DDEbutton:hover {
+                transform: scale(1.5);
+            }
+            
+            table {
+                border-radius: 10px;
+                background-color: #D3E4CD;
+                table-layout: fixed;
+                overflow-wrap: break-word;
+                box-shadow: 2px 6px 5px white;
+            }
+            
+            label {
+                margin: 1vmin;
+            }
+            
+            #newEventDiv {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                background-color: #D3E4CD;
+                box-shadow: 2px 6px 5px rgb(255, 255, 255);
+                border-radius: 30px;
+            }
+            
+            #newEventDiv>input {
+                margin: 30px 50vmin 0px 0px;
+                border-radius: 20px;
+                height: 30px;
+                width: 60vmin;
+                background-color: #99A799;
+                font-weight: bold;
+                box-shadow: 2px 2px 2px rgb(255, 255, 255);
+            }
+            
+            #newEventDiv>input:hover {
+                background-color: #D3E4CD;
+            }
+            
+            #newEventDiv>label {
+                margin: 40px 0px 0px 50vmin;
+                color: black;
+            }
+            
+            #edit {
+                background-color: #D3E4CD;
+                border-radius: 30px;
+                box-shadow: 2px 6px 5px #FEF5ED;
+                border-radius: 30px;
+                padding: 30px;
+            }
+            
+            #edit>form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            #edit>form input {
+                margin: 30px 50vmin 0px 0px;
+                border-radius: 20px;
+                height: 30px;
+                width: 60vmin;
+                background-color: #99A799;
+                font-weight: bold;
+                box-shadow: 2px 2px 2px #FEF5ED;
+            }
+            
+            #edit>form label {
+                margin: 40px 0vmin 0px 40vmin;
+                color: black;
+                font-weight: bold;
+            }
+            
+            #editButton {
+                margin: 30px 0vmin 0px 0px;
+                border-radius: 20px;
+                height: 30px;
+                width: 60vmin;
+                background-color: #99A799;
+                font-weight: bold;
+                box-shadow: 2px 2px 2px rgb(255, 255, 255);
+            }
+            
+            #edit>form input:hover {
+                background-color: #D3E4CD;
+            }
+            
+            #search-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: #D3E4CD;
+                border-radius: 30px;
+                box-shadow: 3px 3px 3px #FEF5ED;
+            }
+            
+            #search-form label {
+                margin: 30px 0vmin 0px 60vmin;
+                color: black;
+                font-weight: bold;
+            }
+            
+            #search-form input {
+                margin: 20px 50vmin 0px 0px;
+                border-radius: 20px;
+                height: 30px;
+                width: 60vmin;
+                background-color: #99A799;
+                font-weight: bold;
+                box-shadow: 2px 2px 2px rgb(255, 255, 255);
+            }
+            
+            #search-form>input:hover {
+                background-color: #D3E4CD;
+            }
+            
+            #detail-button {
+                background-color: #99A799;
+                color: black;
+                padding: 4px;
+                border-radius: 30px;
+            }
+            
+            #show-page {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: #D3E4CD;
+                padding: 30px;
+                border-radius: 30px;
+                box-shadow: 2px 2px 2px rgb(255, 255, 255);
+            }
+            
+            #show-page>.showLabel {
+                margin-left: 60vmin;
+            }
+            
+            #show-page>.showDetail {
+                margin-right: 60vmin;
+            }
+            
+            #add-comment-form {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                background-color: #D3E4CD;
+                padding: 30px;
+                border-radius: 30px;
+                box-shadow: 2px 2px 2px rgb(255, 255, 255);
+            }
+            
+            #add-comment-form>label {
+                margin-left: 40vmin;
+            }
+            
+            #add-comment-form>textarea {
+                margin-right: 30vmin;
+            }
+            
+            #add-comment-form>input {
+                margin-right: 30vmin;
+                margin-top: 30px;
+                border-radius: 10px;
+            }
+            
+            #commentUserImg {
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            }
+            
+            #deleteButton {
+                background-color: #99A799;
+                color: black;
+                padding: 4px;
+                width: 80px;
+                border-radius: 30px;
+            }
+            
+            #deleteButton:hover {
+                transform: scale(1.2);
+            }

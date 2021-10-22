@@ -1,25 +1,28 @@
 <%- include('../partials/header') %>
-
+    <br><br><br>
     <form id="search-form" action="/searches/index" method="POST">
         <label>City:</label>
-        <input type="text" name="city">
-        <input type="submit" value="Search Event">
+        <input type="text" name="city"><br>
+        <input type="submit" value="Search Event"><br>
     </form>
     <br><br><br>
 
 
     <h2>EVENTS IN YOUR CITY</h2>
-    <table id="list">
+    <br><br>
+
+    <table id="list" class="table table-hover">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Venue</th>
-                <th>Description</th>
-                <th>City</th>
-                <th>Date</th>
+                <th scope="col">Title</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Description</th>
+                <th scope="col">City</th>
+                <th scope="col">Date</th>
             </tr>
         </thead>
         <%if(events.length) { %>
+            <h2>Searched events</h2>
             <tbody>
 
                 <% events.forEach(function(e) { %>
@@ -40,13 +43,13 @@
                             <%= e.date.toLocaleDateString() %>
                                 <%= e.date.toLocaleTimeString() %>
                         </td>
-                        <td><a href="/events/<%= e._id %>">DETAILS</a></td>
+                        <td><a id="detail-button" href="/events/<%= e._id %>">DETAILS</a></td>
 
                     </tr>
                     <%});%>
             </tbody>
             <%} else {%>
-                <h1>NO MATCHING RESULTS</h1>
+                <h2>NO MATCHING RESULTS</h2>
                 <%}%>
     </table>
 

@@ -2,23 +2,18 @@
     <br><br><br>
     <div id="edit">
         <form action="/events/<%= event._id %>?_method=PUT" method="POST">
-            <label for="title">Edit Title:
-            <br><input  type="text" name="title" required value="<%= event.title %>" >
-        </label>
+            <label for="title">Edit Title:</label>
+            <input type="text" name="title" required value="<%= event.title %>">
+
+            <label for="venue">Edit Venue:</label>
+            <input type="text" name="venue" required value="<%= event.venue %>">
+            <label for="description">Edit description:</label>
+            <input type="text" name="description" required value="<%= event.description %>">
+
+            <label for="date">Edit Date:</label>
+            <input type="datetime-local" name="date" required value="<%= event.date %>">
             <br>
-            <label for="venue">Edit Venue:
-            <br><input type="text" name="venue" required value="<%= event.venue %>">
-    </label>
-            <br>
-            <label for="description">Edit description:
-        <br><input type="text" name="description" required value="<%= event.description %>">
-    </label>
-            <br>
-            <label for="date">Edit Date:
-        <br><input type="datetime-local" name="date" required value="<%= event.date %>">
-    </label>
-            <br>
-            <button class="submit-button" type="submit">Accept Changes</button>
+            <button id="editButton" type="submit">Accept Changes</button>
         </form>
     </div>
     <%- include('../partials/footer') %>`
