@@ -10,6 +10,32 @@
 
 ![Starting Look of the Website](https://i.imgur.com/fJHgnBT.png)
 
+### Homepage:- 
+
+![Homepage](https://i.imgur.com/ebEKlS6.png)
+
+### Add events page:- 
+
+![Add events page](https://i.imgur.com/G3fzYWm.png)
+
+
+### All events page:- 
+
+![All events page](https://i.imgur.com/ebEKlS6.png)
+
+### City search page:- 
+
+![City search page](https://i.imgur.com/CCu28B1.png)
+
+###  Edit page:- 
+
+![Edit page](https://i.imgur.com/zIHaXcx.png)
+
+###  Attendees button:- 
+
+![Attendees button](https://i.imgur.com/MVW43i1.png)
+
+
 
 # Technologies Used: 
 We have used three technologies to bulid CarTalk website. The three technologies are as follows:- 
@@ -20,16 +46,16 @@ We have used three technologies to bulid CarTalk website. The three technologies
 
 * Javascript:- The javascript is used to give the main functionality to the HTML and CSS built structure. Javascript handles the backend logic behind the working of the game. It handles the clicks and all the state variables that gets manupulated or accessed during the gameplay.
 
-* MongoDb:- 
+* MongoDB:- MondoDB is a noSQL database program. It is a cross-platform document oriented databse program.
 
-* Express:- 
+* Express js:- It is a back and web application development framework for Node.js
 
-* Mongoose:- 
+* Mongoose:- It is Node.js based Object data modeling library for MongoDB
 
 
 
 # Getting Started: 
-Click on the following link to go to the website's homepage:- 
+Click on the following link to go to the website's Sign In page:- 
 
 [Rajkamal's CarTalk website](https://cartalk.herokuapp.com/)
 
