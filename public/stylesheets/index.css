@@ -1,24 +1,75 @@
 body {
-    background-image: url(https://i.imgur.com/O5UGTup.jpg);
+    background-image: url(https://i.imgur.com/N8n0T9g.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+nav {
+    border-width: 2px;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    background-image: linear-gradient(to right, #949494, #4b4b4b);
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px #181818;
+    height: 7vmin;
+    box-shadow: cadetblue;
+}
+
 a {
-    margin: 30px;
+    font-family: 'Satisfy', cursive;
+    color: white;
+    margin-right: 40px;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+    text-shadow: 3px 3px rgb(0, 0, 0);
 }
 
-.login {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 34px;
+a:hover {
+    transform: scale(1.2);
 }
 
-.login img {
+#GoogleImg {
     height: 30px;
 }
 
-img:hover {
-    transform: scale(1.5);
+h1 {
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    font-family: 'Satisfy', cursive;
+    color: #383838;
+    font-size: 11vmin;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3em;
+    animation: bounce 1.2s ease-out;
+}
+
+@keyframes bounce {
+    70% {
+        transform: translateY(0%);
+        padding-bottom: 10px;
+    }
+    80% {
+        transform: translateY(-20%);
+    }
+    90% {
+        transform: translateY(0%);
+        padding-bottom: 11px;
+    }
+    95% {
+        transform: translateY(-14%);
+    }
+    97% {
+        transform: translateY(0%);
+        padding-bottom: 12px;
+    }
+    99% {
+        transform: translateY(-3%);
+    }
+    100% {
+        transform: translateY(0);
+        padding-bottom: 12px;
+        opacity: 1;
+    }
 }
