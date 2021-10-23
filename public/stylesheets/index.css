@@ -4,11 +4,17 @@ body {
     background-repeat: no-repeat;
 }
 
+#logo {
+    margin-left: 16px;
+    margin-top: 6px;
+    width: 45px;
+    height: 45px;
+}
+
 nav {
     border-width: 2px;
     display: grid;
-    justify-content: end;
-    align-content: center;
+    grid-template-columns: 90% 1fr;
     background-image: linear-gradient(to right, #949494, #4b4b4b);
     border-radius: 15px;
     box-shadow: 6px 6px 6px #181818;
@@ -19,6 +25,7 @@ nav {
 a {
     font-family: 'Satisfy', cursive;
     color: white;
+    margin-top: 10px;
     margin-right: 40px;
     font-size: 25px;
     text-decoration: none;
